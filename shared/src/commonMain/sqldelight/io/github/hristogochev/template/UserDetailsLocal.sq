@@ -1,0 +1,64 @@
+import kotlin.Boolean;
+import kotlin.ULong;
+
+
+CREATE TABLE IF NOT EXISTS UserDetailsLocal (
+    id TEXT AS ULong NOT NULL PRIMARY KEY,
+    phoneNumber TEXT NOT NULL UNIQUE,
+    firstName TEXT,
+    lastName TEXT,
+    notificationsEnabled INTEGER AS Boolean NOT NULL
+);
+
+exists:
+SELECT EXISTS(
+    SELECT 1
+    FROM UserDetailsLocal
+    WHERE id = ?
+);
+
+insert:
+INSERT OR IGNORE INTO UserDetailsLocal (
+   id,
+   phoneNumber,
+   firstName,
+   lastName,
+   notificationsEnabled
+) VALUES (
+   :id,
+   :phoneNumber,
+   :firstName,
+   :lastName,
+   :notificationsEnabled
+);
+
+update:
+UPDATE UserDetailsLocal
+SET phoneNumber = ?,
+   firstName = ?,
+   lastName = ?,
+   notificationsEnabled = ?
+WHERE id = ?;
+
+updateFirstAndLastNameById:
+UPDATE UserDetailsLocal SET firstName = :firstName, lastName = :lastName  WHERE id = :id;
+
+updateNotificationsEnabledById:
+UPDATE UserDetailsLocal SET notificationsEnabled = :notificationsEnabled WHERE id = :id;
+
+deleteById:
+DELETE FROM UserDetailsLocal WHERE id = :id;
+
+deleteAllByIds:
+DELETE FROM UserDetailsLocal WHERE id IN :ids;
+
+getById:
+SELECT UserDetailsLocal.* FROM UserDetailsLocal WHERE id = :id LIMIT 1;
+
+getAllById:
+SELECT UserDetailsLocal.* FROM UserDetailsLocal WHERE id = :id;
+
+deleteAllById:
+DELETE FROM UserDetailsLocal WHERE id = :id;
+
+

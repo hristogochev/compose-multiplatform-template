@@ -1,0 +1,68 @@
+<resources>
+    <string name="month_1">Януари</string>
+    <string name="month_2">Февруари</string>
+    <string name="month_3">Март</string>
+    <string name="month_4">Април</string>
+    <string name="month_5">Май</string>
+    <string name="month_6">Юни</string>
+    <string name="month_7">Юли</string>
+    <string name="month_8">Август</string>
+    <string name="month_9">Септември</string>
+    <string name="month_10">Октомври</string>
+    <string name="month_11">Ноември</string>
+    <string name="month_12">Декември</string>
+    <string name="day_of_week_1">Понед.</string>
+    <string name="day_of_week_2">Вторник</string>
+    <string name="day_of_week_3">Сряда</string>
+    <string name="day_of_week_4">Четв.</string>
+    <string name="day_of_week_5">Петък</string>
+    <string name="day_of_week_6">Събота</string>
+    <string name="day_of_week_7">Неделя</string>
+    <string name="year_small">г.</string>
+
+    <string name="day_of_week_full_1">Понеделник</string>
+    <string name="day_of_week_full_2">Вторник</string>
+    <string name="day_of_week_full_3">Сряда</string>
+    <string name="day_of_week_full_4">Четвъртък</string>
+    <string name="day_of_week_full_5">Петък</string>
+    <string name="day_of_week_full_6">Събота</string>
+    <string name="day_of_week_full_7">Неделя</string>
+
+    <string name="days_of_week">Понеделник:\nВторник:\nСряда:\nЧетвъртък:\nПетък:\nСъбота:\nНеделя:</string>
+    <string name="day_of_rest">Почивен ден</string>
+
+    <string name="connection_error">Неуспешно свързване</string>
+    <string name="something_went_wrong">Нещо се обърка</string>
+    <string name="unsuccessful_change">Неуспешна промяна</string>
+    <string name="successful_change">Успешна промяна</string>
+    <string name="slow_down">Един момент...</string>
+    <string name="select">Избери</string>
+    <string name="try_again_later">Моля опитайте по-късно</string>
+    <string name="please_wait">Един момент…</string>
+    <string name="slide_down_to_close">Плъзни надолу за да затвориш</string>
+    <string name="info">Информация</string>
+    <string name="no_info">Няма информация</string>
+    <string name="back">Назад</string>
+    <string name="phone_number">Мобилен номер</string>
+    <string name="expand">Отвори</string>
+    <string name="close">Затвори</string>
+
+    <string name="unknown">Unknown</string>
+
+    <string name="advanced_confirm_prompt_text_1">Сигурни ли сте?</string>
+    <string name="advanced_confirm_prompt_text_2">Сигурни ли сте, че искате да продължите с промените?</string>
+    <string name="advanced_confirm_prompt_text_3">Отмени</string>
+    <string name="advanced_confirm_prompt_text_4">Да</string>
+    <string name="advanced_confirm_prompt_text_5">Сигурни ли сте, че искате да продължите с изтриването?</string>
+
+    <string name="needs_update_1">Време за актуализация!</string>
+    <string name="needs_update_2">Добавили сме много нови функции и сме поправили някои грешки, за да направим преживяването ти възможно най-гладко.</string>
+    <string name="needs_update_3">Актуализирай</string>
+    <string name="needs_update_4">Не сега</string>
+
+    <string name="permission_required">Изисква се разрешение</string>
+    <string name="permission_permanently_denied">Отказан достъп</string>
+
+    <string name="post_notifications_access_required">Не сте разрешили на приложението да показва известия.</string>
+    <string name="permanently_declined_post_notifications">Не сте разрешили на приложението да показва известия. Моля отидете в настройките, за да му разрешите.</string>
+</resources>

@@ -1,0 +1,107 @@
+[versions]
+agp = "9.0.1"
+android-compileSdk = "36"
+android-minSdk = "26"
+android-targetSdk = "36"
+compose-activity = "1.13.0"
+compose-adaptive = "1.2.0"
+composeMultiplatform = "1.11.0"
+kotlin = "2.3.21"
+material3 = "1.11.0-alpha07"
+perk = "0.2.0"
+vortex="0.3.0"
+koin = "4.2.1"
+kotlinx-serialization-json = "1.11.0"
+ktor = "3.5.0"
+android-crypto = "1.1.0-alpha06"
+multiplatform-settings = "1.3.0"
+kotlinx-datetime = "0.8.0"
+kotlinx-io = "0.9.0"
+sqldelight = "2.3.2"
+stately = "2.1.0"
+splashScreen = "1.2.0"
+lifecycle = "2.10.0"
+landscapistCoil = "2.3.6"
+firebaseCloudMessaging = "24.1.0"
+
+[libraries]
+# Compose Android
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "compose-adaptive" }
+
+# Compose multiplatform
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "material3" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
+compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+
+# Vortex
+vortex = { module = "io.github.hristogochev:vortex", version.ref = "vortex" }
+vortex-koin = { module = "io.github.hristogochev:vortex-koin", version.ref = "vortex" }
+
+# Koin
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+
+# Serilization
+kotlinx-serliaizationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
+
+# Ktor Android
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+
+# Ktor iOS
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+
+# Ktor
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-serilization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serilization = { module = "io.ktor:ktor-serialization", version.ref = "ktor" }
+ktor-serilizationKotlinxJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+# Settings
+settings-android-encrypted = { module = "androidx.security:security-crypto-ktx", version.ref = "android-crypto" }
+settings-multiplatform = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-settings" }
+settings-multiplatformSerialization = { module = "com.russhwolf:multiplatform-settings-serialization", version.ref = "multiplatform-settings" }
+
+# Kotlinx
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
+
+# SQLDelight
+sqldelight-coroutines-extensions = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-primitive-adapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "sqldelight" }
+sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+stately-common = { module = "co.touchlab:stately-common", version.ref = "stately" }
+stately-concurrency = { module = "co.touchlab:stately-concurrency", version.ref = "stately" }
+
+# AndroidX
+splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+
+# Async image
+landscapistCoil = { module = "com.github.skydoves:landscapist-coil3", version.ref = "landscapistCoil" }
+
+# Firebase
+firebaseCloudMessaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseCloudMessaging" }
+
+# Perk
+perk = { module = "io.github.hristogochev:perk", version.ref = "perk" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlinSerilization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }

@@ -1,0 +1,54 @@
+import kotlin.UInt;
+
+CREATE TABLE IF NOT EXISTS CountryLocal (
+    id TEXT AS UInt PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE
+);
+
+deleteAllByIds:
+DELETE FROM CountryLocal WHERE id IN :ids;
+
+
+exists:
+SELECT EXISTS(
+    SELECT 1
+    FROM CountryLocal
+    WHERE id = ?
+);
+
+insert:
+INSERT OR IGNORE INTO CountryLocal (
+    id,
+    name
+) VALUES (
+    :id,
+    :name
+);
+
+update:
+UPDATE CountryLocal
+SET name = :name
+WHERE id = :id;
+
+getAll:
+SELECT CountryLocal.*
+FROM CountryLocal;
+
+getAllInIds:
+SELECT CountryLocal.*
+FROM CountryLocal
+WHERE CountryLocal.id IN ?;
+
+getById:
+SELECT CountryLocal.*
+FROM CountryLocal
+WHERE CountryLocal.id = ? LIMIT 1;
+
+getAllInRegionIds:
+SELECT CountryLocal.*
+FROM CountryLocal
+JOIN RegionLocal ON RegionLocal.countryId = CountryLocal.id
+WHERE RegionLocal.id IN :regionIds;
+
+
+

@@ -1,0 +1,32 @@
+-- import kotlin.UInt;
+-- import kotlin.ULong;
+-- import kotlin.Boolean;
+--
+-- CREATE TABLE IF NOT EXISTS CountryLocal (
+--     id TEXT AS UInt PRIMARY KEY,
+--     name TEXT NOT NULL UNIQUE
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS RegionLocal (
+--     id TEXT AS UInt PRIMARY KEY,
+--     name TEXT NOT NULL UNIQUE,
+--     countryId TEXT AS UInt NOT NULL,
+--     FOREIGN KEY (countryId) REFERENCES CountryLocal(id) ON DELETE CASCADE,
+--     UNIQUE(name, countryId)
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS CityLocal (
+--     id TEXT AS ULong PRIMARY KEY,
+--     name TEXT NOT NULL UNIQUE,
+--     regionId TEXT AS UInt NOT NULL,
+--     FOREIGN KEY (regionId) REFERENCES RegionLocal(id) ON DELETE CASCADE,
+--     UNIQUE(name, regionId)
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS UserDetailsLocal (
+--     id TEXT AS ULong NOT NULL PRIMARY KEY,
+--     phoneNumber TEXT NOT NULL UNIQUE,
+--     firstName TEXT,
+--     lastName TEXT,
+--     notificationsEnabled INTEGER AS Boolean NOT NULL
+-- );
