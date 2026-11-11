@@ -31,8 +31,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        if (savedInstanceState != null) {
+        
+        if (savedInstanceState != null && !recreatedForConfigurationChange) {
             val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
@@ -70,6 +70,15 @@ class MainActivity : ComponentActivity() {
 
             App(prepared = prepared)
         }
+    }
+
+    override fun onDestroy() {
+        recreatedForConfigurationChange = isChangingConfigurations
+        super.onDestroy()
+    }
+
+    companion object {
+        private var recreatedForConfigurationChange = false
     }
 }
 
